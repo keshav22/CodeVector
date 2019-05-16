@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Favorite</title>
+        <link rel="stylesheet" type="text/css" href= "/mainpage.css">
+        <script language="javascript" type="text/javascript" src="/function_1.js"></script>
+        
+    </head>
+    <body style="background:#000000;">
+        
+     <div style="text-align:center;">
+    <div class="scrollmenu1" style="display:inline-block;" onmouseover="overflw(1)" onmouseout="overflw(0)" id="menu">
+    <% data.forEach(function(show){%>
+        <div style="display: inline-block;">
+        <h5 style=" color:#ffffff;text-align:center; margin-top: 50px;">(<%=show["title"]%>)</h5>
+        <form action="/tvshow" method="POST" >
+          <input type="text" style="visibility: hidden;"  value="<%=show["id"]%>" name="tvid">
+        <div style="display: block"  >
+        <input type="image" src="<%=show["img_url"]%>" style="height:180px; width:130px;" value= onClick="this.form.submit()" >
+        </form>
+        </div>
+        <div style="display: block; text-align: center;">
+          <form action="/remove" method="POST">
+          <input type="text" style="visibility: Hidden;"  value="<%=show["_id"]+"#"+show["id"]+"#"+show["title"]+"#"+show["img_url"]%>" name="favorite">
+          <button style="color:#ffffff;background: #000000; display: block;margin-left: auto;margin-right: auto; border-radius: 20px;" onClick="this.form.submit()">Remove as favorite</button>
+          </form>
+        </div>
+        </div>
+    <% }) %>
+    </div>
+    </div>
+    </body>
+</html>

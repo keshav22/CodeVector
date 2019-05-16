@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            <%=title%>
+        </title>
+    </head>
+    <body style="background: #000000">
+        <div style="display:inline-block; width:100%;">
+        <img style="padding: 20px; border: 2px #ffffff;" height="340" src=<%=data.tvShow.image_thumbnail_path%>>
+        <video style=" float:right;margin-right:400px; padding: 20px;" width="window.width" height="340" controls>
+            <source src="https://youtu.be/PpCLbfov914" type="video/mp4">
+        </video>
+        </div>
+        <h1 style="color: #ffffff;padding-left:20px;"><%=title%></h1>
+        <p style="color:#ffffff; padding-left:20px;"> Ratings : <%=data.tvShow.rating%></p>
+        <p style="color:#ffffff; padding-left:20px;"> Rating Count : <%=data.tvShow.rating_count%></p>
+        <p style="color: #ffffff; padding-left:20px;">Genres : <%=data.tvShow.genres%></p>
+        <p style="color: #ffffff;padding-left:20px;"><%=data.tvShow.description%></p>
+        
+        <div style="text-align: center;">
+        <div style="display: inline-block">
+        <div style="display: block">
+        
+        </div>
+        </div>
+        </div>
+        
+    </body>
+</html>

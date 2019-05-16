@@ -1,0 +1,35 @@
+
+div.scrollmenu1
+{
+  width: 100%;
+  height: auto;
+  margin-top:100px;
+  
+}
+
+div.scrollmenu1 img {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  
+}
+
+div.scrollmenu1 img:hover {
+  background-color: #777;
+}
+
+.pop{
+  border-radius: 25px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  text-align: center;
+  border-bottom-color: #A9A9A9;
+  margin-left: 15px;
+  background: #000000;
+}
