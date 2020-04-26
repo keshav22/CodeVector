@@ -7,7 +7,7 @@ var passport        =  require("passport");
 var LocalStrategy   =  require("passport-local");
 var PLM             =  require("passport-local-mongoose");
 var User            =  require("./models/user");
-mongoose.connect("mongodb://localhost/newprofile");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/newprofile");
 
 app.use(require("express-session")({
     secret: "CodeVector",
