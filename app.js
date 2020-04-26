@@ -7,6 +7,7 @@ var passport        =  require("passport");
 var LocalStrategy   =  require("passport-local");
 var PLM             =  require("passport-local-mongoose");
 var User            =  require("./models/user");
+require('dotenv').config()
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/newprofile");
 
 app.use(require("express-session")({
@@ -255,6 +256,6 @@ app.get("*",function(req,res)
     res.send("Page Not found");
 });
 
-app.listen(process.env.PORT,process.env.IP, function(){
+app.listen(process.env.PORT  || 3000 ,process.env.IP, function(){
     console.log("Server Started");
 });
